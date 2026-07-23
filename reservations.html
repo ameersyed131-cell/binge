@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reserve a Table — Binge Bakery</title>
+<meta name="description" content="Reserve a table at any Binge Bakery outpost across Gurgaon and Delhi — for a lunch, a birthday, or just cake and coffee.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader">
+  <svg viewBox="0 0 120 120" fill="none">
+    <g class="bean bean--left"><path d="M60 20c-14 0-24 12-24 26 0 16 12 30 24 34 -8-8-12-20-12-32 0-12 6-22 12-28z" fill="#C79A5C"/></g>
+    <g class="bean bean--right"><path d="M60 20c14 0 24 12 24 26 0 16-12 30-24 34 8-8 12-20 12-32 0-12-6-22-12-28z" fill="#E7CEBE"/></g>
+    <path class="bean-crack" d="M60 30 L60 90" stroke="#F7EFE3" stroke-width="2"/>
+  </svg>
+  <span class="loader-word">Fresh from the oven</span>
+</div>
+
+<header class="site-nav">
+  <a href="index.html" class="logo-mark">
+    <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="16" y="21" text-anchor="middle" font-family="Fraunces, serif" font-size="15" fill="currentColor">B</text></svg>
+    Binge
+  </a>
+  <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <nav class="primary-links">
+    <a href="index.html">Home</a>
+    <a href="our-story.html">Our Story</a>
+    <a href="menu.html">The Menu</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="reservations.html" class="active">Reserve a Table</a>
+    <a href="catering.html">Celebrations &amp; Catering</a>
+    <a href="visit-us.html">Visit Us</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" style="min-height:44vh;">
+    <div class="hero-grain"></div>
+    <div class="hero-inner reveal">
+      <span class="eyebrow" style="color:var(--brass-soft);">Reserve a Table</span>
+      <h1 style="font-size:clamp(38px,6vw,60px);">Save a corner for later.</h1>
+      <p class="lede">Tell us when, how many, and where — we'll have the table ready and the first round of pastries on standby.</p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="grid-2" style="align-items:flex-start;">
+      <div class="reveal">
+        <span class="eyebrow">Before you book</span>
+        <h2 style="font-size:clamp(26px,3.2vw,36px); margin-top:14px;">A few things worth knowing</h2>
+        <p style="margin-top:20px; opacity:.75; max-width:440px;">Our cafe outposts on Sohna Road and Kailash Colony hold reservations in blocks of 90 minutes. Weekend evenings fill quickly, so booking a day ahead is a good idea if you're a party of four or more. Walk-ins are always welcome — a table just isn't guaranteed at peak hours.</p>
+        <div style="margin-top:36px; display:flex; flex-direction:column; gap:18px;">
+          <div class="card" style="padding:22px 24px;">
+            <h3 style="font-size:16px;">Peak Hours</h3>
+            <p style="opacity:.65; font-size:14px; margin-top:6px;">1pm–3pm and 7pm–9pm, daily. Book ahead if you can.</p>
+          </div>
+          <div class="card" style="padding:22px 24px;">
+            <h3 style="font-size:16px;">Large Parties</h3>
+            <p style="opacity:.65; font-size:14px; margin-top:6px;">Groups of eight or more — write to us and we'll confirm by phone.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-panel reveal">
+        <h3 style="color:var(--ivory); font-size:22px; margin-bottom:28px;">Booking Details</h3>
+        <form onsubmit="event.preventDefault(); this.querySelector('.form-success').style.display='block';">
+          <div class="field-row">
+            <div class="field"><label for="r-name">Full Name</label><input id="r-name" type="text" placeholder="Your name" required></div>
+            <div class="field"><label for="r-phone">Phone Number</label><input id="r-phone" type="tel" placeholder="+91" required></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="r-date">Date</label><input id="r-date" type="date" required></div>
+            <div class="field"><label for="r-time">Time</label><input id="r-time" type="time" required></div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="r-guests">Party Size</label>
+              <select id="r-guests"><option>2 Guests</option><option>3 Guests</option><option>4 Guests</option><option>5–7 Guests</option><option>8+ Guests</option></select>
+            </div>
+            <div class="field">
+              <label for="r-outpost">Outpost</label>
+              <select id="r-outpost"><option>DLF Phase 1, Gurgaon</option><option>Sohna Road Cafe, Gurgaon</option><option>Nirvana Country, Gurgaon</option><option>Kailash Colony, Delhi</option></select>
+            </div>
+          </div>
+          <div class="field"><label for="r-note">Occasion or Note (optional)</label><textarea id="r-note" rows="3" placeholder="Birthday, anniversary, allergies — anything we should know"></textarea></div>
+          <button type="submit" class="btn btn--gold" style="margin-top:8px;">Confirm Reservation</button>
+          <p class="form-success" style="display:none; margin-top:18px; color:var(--brass-soft); font-size:14px;">Thank you — your table request has been noted. Our team will confirm by phone shortly.</p>
+          <p class="form-note">This form sends your request to our outpost directly. For same-day bookings, calling ahead is faster — see our <a href="visit-us.html" style="text-decoration:underline;">Visit Us</a> page for numbers.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="fcol">
+        <div class="logo-mark" style="color:var(--ivory); margin-bottom:16px;">
+          <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="16" y="21" text-anchor="middle" font-family="Fraunces, serif" font-size="15" fill="currentColor">B</text></svg>
+          Binge Bakery
+        </div>
+        <p>Your neighbourhood bakery, fifteen years fresh. Gurgaon &amp; Delhi.</p>
+      </div>
+      <div class="fcol">
+        <h4>Explore</h4>
+        <a href="our-story.html">Our Story</a>
+        <a href="menu.html">The Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="catering.html">Catering</a>
+      </div>
+      <div class="fcol">
+        <h4>Visit</h4>
+        <a href="reservations.html">Reserve a Table</a>
+        <a href="visit-us.html">Our Locations</a>
+        <a href="visit-us.html#contact">Contact Us</a>
+      </div>
+      <div class="fcol">
+        <h4>Legal</h4>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="https://www.instagram.com/bingebakery/">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© <span class="year"></span> Binge Bakery &amp; More. All rights reserved.</span>
+      <span>Made with butter, in DLF Phase 1.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Menu — Binge Bakery</title>
+<meta name="description" content="Cakes, tarts, savoury bakes and all-day coffee — the full Binge Bakery menu across our Gurgaon and Delhi outposts.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader">
+  <svg viewBox="0 0 120 120" fill="none">
+    <g class="bean bean--left"><path d="M60 20c-14 0-24 12-24 26 0 16 12 30 24 34 -8-8-12-20-12-32 0-12 6-22 12-28z" fill="#C79A5C"/></g>
+    <g class="bean bean--right"><path d="M60 20c14 0 24 12 24 26 0 16-12 30-24 34 8-8 12-20 12-32 0-12-6-22-12-28z" fill="#E7CEBE"/></g>
+    <path class="bean-crack" d="M60 30 L60 90" stroke="#F7EFE3" stroke-width="2"/>
+  </svg>
+  <span class="loader-word">Fresh from the oven</span>
+</div>
+
+<header class="site-nav">
+  <a href="index.html" class="logo-mark">
+    <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="16" y="21" text-anchor="middle" font-family="Fraunces, serif" font-size="15" fill="currentColor">B</text></svg>
+    Binge
+  </a>
+  <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <nav class="primary-links">
+    <a href="index.html">Home</a>
+    <a href="our-story.html">Our Story</a>
+    <a href="menu.html" class="active">The Menu</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="reservations.html">Reserve a Table</a>
+    <a href="catering.html">Celebrations &amp; Catering</a>
+    <a href="visit-us.html">Visit Us</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" style="min-height:52vh;">
+    <div class="hero-grain"></div>
+    <div class="hero-inner reveal">
+      <span class="eyebrow" style="color:var(--brass-soft);">The Menu</span>
+      <h1 style="font-size:clamp(38px,6vw,64px);">Everything baked this morning.</h1>
+      <p class="lede">Cakes finished by hand, tarts filled to order, and a savoury counter built for a proper lunch, not just a snack.</p>
+    </div>
+  </section>
+
+  <section class="wrap">
+
+    <div class="menu-category reveal">
+      <span class="tag">Celebration Cakes</span>
+      <h3 style="margin-top:16px;">Cakes &amp; Celebrations</h3>
+      <p class="cat-note">Half-kilo to five-kilo, iced and finished the same day for pickup. Custom messages and themes on request.</p>
+      <div class="menu-item"><div><div class="mi-name">Belgian Truffle Cake</div><div class="mi-desc">Dark chocolate sponge, whipped truffle ganache, chocolate shavings.</div></div><div class="mi-price">₹750 / kg</div></div>
+      <div class="menu-item"><div><div class="mi-name">Blueberry Cheesecake</div><div class="mi-desc">Baked cheesecake, blueberry compote, biscuit base.</div></div><div class="mi-price">₹950 / kg</div></div>
+      <div class="menu-item"><div><div class="mi-name">Classic Black Forest</div><div class="mi-desc">Chocolate sponge, kirsch-soaked cherries, whipped cream.</div></div><div class="mi-price">₹650 / kg</div></div>
+      <div class="menu-item"><div><div class="mi-name">Red Velvet</div><div class="mi-desc">Cream cheese frosting, cocoa sponge, a Binge bestseller.</div></div><div class="mi-price">₹850 / kg</div></div>
+    </div>
+
+    <div class="menu-category reveal">
+      <span class="tag">Bakery Counter</span>
+      <h3 style="margin-top:16px;">Pastries &amp; Tarts</h3>
+      <p class="cat-note">Made in small batches through the day — arrive early for the fruit tart, it doesn't last past 6pm.</p>
+      <div class="menu-item"><div><div class="mi-name">Fresh Fruit Tart</div><div class="mi-desc">Buttery shell, vanilla pastry cream, seasonal fruit.</div></div><div class="mi-price">₹195</div></div>
+      <div class="menu-item"><div><div class="mi-name">Dark Chocolate Brownie</div><div class="mi-desc">Dense and fudgy, barely-set centre, walnuts on request.</div></div><div class="mi-price">₹120</div></div>
+      <div class="menu-item"><div><div class="mi-name">Truffle Pastry</div><div class="mi-desc">Individual slice of our signature Belgian truffle cake.</div></div><div class="mi-price">₹165</div></div>
+      <div class="menu-item"><div><div class="mi-name">Classic Fruit Cake</div><div class="mi-desc">Dense, rum-soaked, dried fruit and nuts — a Binge original.</div></div><div class="mi-price">₹210 / slice</div></div>
+    </div>
+
+    <div class="menu-category reveal">
+      <span class="tag">Savoury Counter</span>
+      <h3 style="margin-top:16px;">All-Day Bites</h3>
+      <p class="cat-note">For the lunch crowd — light, fresh, and built for the cafe outposts.</p>
+      <div class="menu-item"><div><div class="mi-name">Grilled Chicken Tikka Quiche</div><div class="mi-desc">Flaky crust, smoky tikka filling, baked to order.</div></div><div class="mi-price">₹295</div></div>
+      <div class="menu-item"><div><div class="mi-name">Grilled Vegetable Salad</div><div class="mi-desc">Char-grilled seasonal vegetables, herb vinaigrette.</div></div><div class="mi-price">₹260</div></div>
+      <div class="menu-item"><div><div class="mi-name">Classic Chicken Tikka</div><div class="mi-desc">Marinated overnight, grilled fresh, served with mint chutney.</div></div><div class="mi-price">₹340</div></div>
+      <div class="menu-item"><div><div class="mi-name">Spinach &amp; Feta Quiche</div><div class="mi-desc">A vegetarian favourite from the Sohna Road cafe.</div></div><div class="mi-price">₹275</div></div>
+    </div>
+
+    <div class="menu-category reveal">
+      <span class="tag">To Drink</span>
+      <h3 style="margin-top:16px;">Coffee &amp; Cold Beverages</h3>
+      <p class="cat-note">Strong, cold, and generous — the way Gurgaon takes its coffee.</p>
+      <div class="menu-item"><div><div class="mi-name">Binge Cold Coffee</div><div class="mi-desc">Our most-ordered drink, every outpost, every day.</div></div><div class="mi-price">₹185</div></div>
+      <div class="menu-item"><div><div class="mi-name">Belgian Hot Chocolate</div><div class="mi-desc">Rich, thick, served with a side of whipped cream.</div></div><div class="mi-price">₹210</div></div>
+      <div class="menu-item"><div><div class="mi-name">Classic Milkshakes</div><div class="mi-desc">Chocolate, strawberry, or butterscotch — thick and cold.</div></div><div class="mi-price">₹195</div></div>
+      <div class="menu-item"><div><div class="mi-name">Fresh Lime Soda</div><div class="mi-desc">Sweet, salted, or half-half — made to order.</div></div><div class="mi-price">₹110</div></div>
+    </div>
+
+    <p style="opacity:.55; font-size:13.5px; margin-top:12px;">Prices are indicative and may vary slightly by outpost. Ask our counter team about the day's fresh specials and seasonal fruit availability.</p>
+
+    <div style="text-align:center; margin-top:56px;">
+      <a href="catering.html" class="btn btn--primary">Order in Bulk for an Event</a>
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="fcol">
+        <div class="logo-mark" style="color:var(--ivory); margin-bottom:16px;">
+          <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="16" y="21" text-anchor="middle" font-family="Fraunces, serif" font-size="15" fill="currentColor">B</text></svg>
+          Binge Bakery
+        </div>
+        <p>Your neighbourhood bakery, fifteen years fresh. Gurgaon &amp; Delhi.</p>
+      </div>
+      <div class="fcol">
+        <h4>Explore</h4>
+        <a href="our-story.html">Our Story</a>
+        <a href="menu.html">The Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="catering.html">Catering</a>
+      </div>
+      <div class="fcol">
+        <h4>Visit</h4>
+        <a href="reservations.html">Reserve a Table</a>
+        <a href="visit-us.html">Our Locations</a>
+        <a href="visit-us.html#contact">Contact Us</a>
+      </div>
+      <div class="fcol">
+        <h4>Legal</h4>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="https://www.instagram.com/bingebakery/">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© <span class="year"></span> Binge Bakery &amp; More. All rights reserved.</span>
+      <span>Made with butter, in DLF Phase 1.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
